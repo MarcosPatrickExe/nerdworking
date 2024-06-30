@@ -27,8 +27,9 @@ class _LoginState extends State<Login>{
 
     return Scaffold(
       
+      backgroundColor: Theme.of( buildContext ).colorScheme.surface,
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme.of( buildContext ).colorScheme.primary,
         centerTitle: true,
         title: Text("Login"),
       ),
@@ -42,7 +43,7 @@ class _LoginState extends State<Login>{
               const SizedBox( height: 30.0 ),
               Text(
                 'Nerdworking',
-                style: Theme.of(context).textTheme.titleLarge, // headlineMedium
+                style: TextStyle( color: Theme.of( context).colorScheme.onSurface  ),
               ),
               const SizedBox( height: 80.0 ),
               FormFieldComponent.buildField( 
