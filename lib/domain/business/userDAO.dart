@@ -1,7 +1,8 @@
 import '../model/User.dart';
 
 
-abstract class userDAO{
+
+abstract class UserDAO{
 
   Future<void> login( String email, String password ); 
 
@@ -12,5 +13,3 @@ abstract class userDAO{
   Future<bool> updateAccountDataByID( int userID, User user ); 
 
 }
-
-

@@ -31,12 +31,12 @@ class _SettingAppThemeState extends State<SettingAppTheme> {
       title: 'Flutter Demo',
       
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorSchemeSeed: const Color.fromARGB(255, 58, 179, 183),  //ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 58, 179, 183)),
         useMaterial3: true,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        colorSchemeSeed: const Color.fromRGBO(86, 80, 14, 171),
+        colorSchemeSeed: const Color.fromARGB(84, 136, 2, 214),
       ),
 
       themeMode: _currentTheme,  //ThemeMode.light,
