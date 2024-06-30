@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../components/FormFieldComponent.dart';
 import '../../domain/model/Field.dart';
-import '../../utils/styles.dart';
+import '../../utils/Styles.dart';
 import './CreateUserAccount.dart';
 
 
@@ -28,10 +28,9 @@ class _LoginState extends State<Login>{
     return Scaffold(
       
       appBar: AppBar(
-        
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-    
-        title: Text("NerdWorking!!"),
+        centerTitle: true,
+        title: Text("Login"),
       ),
       body: Center(
         child: Padding(
@@ -39,10 +38,10 @@ class _LoginState extends State<Login>{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset("assets/ic_launcher.png"),
+            //  Image.asset("assets/ic_launcher.png"),
               const SizedBox( height: 30.0 ),
               Text(
-                'Botão de Alerta',
+                'Nerdworking',
                 style: Theme.of(context).textTheme.titleLarge, // headlineMedium
               ),
               const SizedBox( height: 80.0 ),
@@ -74,7 +73,7 @@ class _LoginState extends State<Login>{
                 child: ElevatedButton(
                   style: ButtonStyle(
                       textStyle: WidgetStateProperty.all<TextStyle>( const TextStyle( color: Color.fromARGB(255, 255, 255, 255),  ) ),
-                      backgroundColor: WidgetStateProperty.all<Color>( AppColors.RED.color ),
+                  //    backgroundColor: WidgetStateProperty.all<Color>( AppColors.RED.color ),
                       shape: WidgetStateProperty.all<OutlinedBorder>( //  MaterialStateProperty.all  ->  RoundedRectangleBorder(
                           const RoundedRectangleBorder(
                               borderRadius: BorderRadius.all( Radius.circular(30.0) ),
@@ -86,16 +85,16 @@ class _LoginState extends State<Login>{
                     if( this._emailInput == "" ){
                         ScaffoldMessenger.of(buildContext).showSnackBar(
                           SnackBar( 
-                            content: const Text("O campo 'E-mail' não pode estar vazia!"),
-                            backgroundColor: AppColors.RED.color, 
+                            content: const Text("O campo 'E-mail' não pode estar vazio!"),
+                    //        backgroundColor: AppColors.RED.color, 
                           )
                         );
 
                     }else if( this._passwordInput == "" ){
                         ScaffoldMessenger.of( buildContext ).showSnackBar(
                           SnackBar( 
-                            content: const Text("O campo 'Senha' não pode estar vazia!"),
-                            backgroundColor: AppColors.RED.color, 
+                            content: const Text("O campo 'Senha' não pode estar vazio!"),
+                  //          backgroundColor: AppColors.RED.color, 
                           ),
                         );
 
@@ -103,7 +102,7 @@ class _LoginState extends State<Login>{
                         ScaffoldMessenger.of(buildContext).showSnackBar(
                           SnackBar( 
                             content: const Text("O campo 'E-mail' não contém o caractere '@' "),
-                            backgroundColor: AppColors.RED.color, 
+                      //      backgroundColor: AppColors.RED.color, 
                           )
                         );
 
@@ -115,13 +114,14 @@ class _LoginState extends State<Login>{
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                        Icon( Icons.login, color: AppColors.WHITE.color ),
+                        Icon( Icons.login, // color: AppColors.WHITE.color 
+                        ),
                         const SizedBox( width: 10.0 ),
                         Text(
                           "Entrar",
                           style: TextStyle(
                               fontSize: 20.0, 
-                              color: AppColors.WHITE.color,
+                      //        color: AppColors.WHITE.color,
                           ), 
                         ),
                     ]
@@ -201,7 +201,7 @@ class _LoginState extends State<Login>{
           },
       ),
 
-       /*
+      /*
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',

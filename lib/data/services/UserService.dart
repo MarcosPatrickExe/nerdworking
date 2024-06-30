@@ -6,10 +6,17 @@ class UserService{
   UserRepository _userRepository;
   UserService(): this._userRepository = UserRepository();
 
-
+ 
   Future<void> loginService( String email, String password ) async {
       this._userRepository.login( email, password );
 
+      
+  }
+
+
+  Future<void> createAccount(  String email, String nickName, String avatar, String password, ) async{
+
+    int status = await this._userRepository.signup(nickName, avatar, email, password);
 
   }
 

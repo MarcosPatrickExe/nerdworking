@@ -21,7 +21,7 @@ class SettingAppTheme extends StatefulWidget {
 class _SettingAppThemeState extends State<SettingAppTheme> {
   
 
-  ThemeMode _currentTheme = ThemeMode.system;
+  final ThemeMode _currentTheme = ThemeMode.light;
 
 
   @override
@@ -31,12 +31,14 @@ class _SettingAppThemeState extends State<SettingAppTheme> {
       title: 'Flutter Demo',
       
       theme: ThemeData(
-        colorSchemeSeed: const Color.fromARGB(255, 58, 179, 183),  //ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 58, 179, 183)),
+        brightness: Brightness.light,
+        colorSchemeSeed: Color.fromARGB(255, 48, 110, 245),  //ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 58, 179, 183)),
         useMaterial3: true,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        colorSchemeSeed: const Color.fromARGB(84, 136, 2, 214),
+        colorSchemeSeed: Color.fromARGB(82, 22, 233, 3),
+        useMaterial3: true,
       ),
 
       themeMode: _currentTheme,  //ThemeMode.light,

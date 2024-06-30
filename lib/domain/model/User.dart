@@ -2,7 +2,7 @@
 
 class User{
 
-  int _ID;
+  int? _ID;
   String _email;
   String _nickName;
   String _avatar;
@@ -11,7 +11,7 @@ class User{
 
 
   User({
-    required int id,
+    int? id,
     required String emaill,
     required String nickNamee,
     required String avatarr,
@@ -24,6 +24,7 @@ class User{
     this._avatar = avatarr,
     this._password = passwordd,
     this._score = scoree;
+
 
 
     factory User.fromJSON( Map<String, dynamic> jsonfile ){

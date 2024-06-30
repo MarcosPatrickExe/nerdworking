@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "../../domain/model/Field.dart";
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import '../../utils/styles.dart';
+import '../../utils/Styles.dart';
 
 
 abstract class FormFieldComponent{
