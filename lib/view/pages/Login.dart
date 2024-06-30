@@ -3,6 +3,7 @@ import '../components/FormFieldComponent.dart';
 import '../../domain/model/Field.dart';
 import '../../utils/Styles.dart';
 import './CreateUserAccount.dart';
+import '../../data/services/UserService.dart';
 
 
 
@@ -39,21 +40,31 @@ class _LoginState extends State<Login>{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-            //  Image.asset("assets/ic_launcher.png"),
+              Container(
+                constraints: BoxConstraints(
+                  maxHeight: MediaQuery.of(context).size.height *0.2,
+                  maxWidth: MediaQuery.of(context).size.width *0.2,
+                ),
+                child: Image.asset("nerdworking_512.png"),
+              ),
               const SizedBox( height: 30.0 ),
               Text(
                 'Nerdworking',
-                style: TextStyle( color: Theme.of( context).colorScheme.onSurface  ),
+                style:  TextStyle( 
+                          color: Theme.of( context).colorScheme.onSurface,
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.bold
+                        ),
               ),
               const SizedBox( height: 80.0 ),
               FormFieldComponent.buildField( 
-              
-                fieldView: const Field(
+                fieldView: const Field( 
                   "Email",
                   "e-mail",
                   Icon ( Icons.email_outlined ),
                   TextInputType.emailAddress
                 ), 
+                currentIndex: buildContext,
                 textChagedCallback: (String value ){  this._emailInput = value; },
                 maxLength: 320, // The maximum length for emails
               ),
@@ -65,6 +76,7 @@ class _LoginState extends State<Login>{
                   Icon ( Icons.password_rounded ),
                   TextInputType.visiblePassword
                 ), 
+                currentIndex: buildContext,
                 textChagedCallback: (String value ){  this._passwordInput = value; },
                 maxLength: 30,
               ),
@@ -109,7 +121,7 @@ class _LoginState extends State<Login>{
                         );
 
                     }else{
-                      //  await new UserService().userLogin( this._emailInput,  this._passwordInput, buildContext );
+                        await new UserService().loginService( this._emailInput,  this._passwordInput, buildContext );
                     }
                     
                   },

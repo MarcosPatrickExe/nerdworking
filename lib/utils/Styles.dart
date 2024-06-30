@@ -19,6 +19,7 @@ enum AppColors{
   ORANGE( Color.fromRGBO(243, 153, 35, 1) ),
   BLUE( Color.fromRGBO( 9, 130, 255, 1) ),
   SKYBLUE( Color.fromRGBO( 118, 213, 254, 1) ),
+  SKYBLUE_TEXT_HINT( Color.fromRGBO(64, 160, 201, 0.7) ),
   BLUE_MEDIUM( Color.fromRGBO( 3, 92, 194, 1) ),
   BLUE_DARK( Color.fromRGBO(1, 43, 92, 1) );
 

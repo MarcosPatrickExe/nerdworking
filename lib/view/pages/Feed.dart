@@ -60,10 +60,6 @@ class FeedState extends State<Feed>{
                 label: "Notificações"
               ),
 
-              BottomNavigationBarItem( 
-                icon:  Icon( Icons.person ),
-                label: "Meu perfil"
-              ),
           ],
           onTap: (int index){
               print( " Indexxxx: "+index.toString() );
@@ -78,7 +74,6 @@ class FeedState extends State<Feed>{
                   builder: ( BuildContext dialogContext ){
 
                     return AlertDialog(
-                    
                         content: Padding(
                           padding: const EdgeInsets.symmetric( horizontal: 12.0 ),
                           child: IntrinsicHeight(
@@ -91,13 +86,16 @@ class FeedState extends State<Feed>{
                                         maxHeight: MediaQuery.of(context).size.height *0.2,
                                         maxWidth: MediaQuery.of(context).size.width *0.2,
                                       ),
-                                      child: Image.asset("assets/nerdworking_512.png"),
+                                      child: Image.asset("nerdworking_512.png"),
                                     ),
-                                    const SizedBox( height: 17.0, ),
-                                    const Text( "Funcionalidade ainda em desenvolvimento! ", style: TextStyle( fontSize: 22.0), ),
+                                    const SizedBox( height: 22.0, ),
+                                    const Text( "Funcionalidade ainda em desenvolvimento! ", style: TextStyle( fontSize: 22.0,), textAlign: TextAlign.center, ),
+                                    const SizedBox( height: 10.0, ),
                                     const Text( "Todos os direitos reservados. ", style: TextStyle( fontSize: 16.0), ),
-                                    const Text( "E-mail: marcospatrick.dev@gmail.com", style: TextStyle( fontSize: 13.0), ),
-                                    const Text( "Instagem: @patrick_saraiva", style: TextStyle( fontSize: 13.0), ),
+                                    const SizedBox( height: 10.0, ),
+                                    const Text( "Developer e-mail: marcospatrick.dev@gmail.com", style: TextStyle( fontSize: 13.0), ),
+                                    const SizedBox( height: 10.0, ),
+                                    const Text( "Developer Instagram: @patrick_saraiva", style: TextStyle( fontSize: 13.0), ),
                                 ]
                             ),
                           )

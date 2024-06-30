@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../repositories/UserRepository.dart';
+import '../../view/pages/Feed.dart';
+
 
 
 class UserService{
@@ -9,9 +10,11 @@ class UserService{
   UserService(): this._userRepository = UserRepository();
 
  
-  Future<void> loginService( String email, String password ) async {
-      this._userRepository.login( email, password );
+  Future<void> loginService( String email, String password, BuildContext ctx ) async {
+    //  this._userRepository.login( email, password );
 
+
+    Navigator.push( ctx, MaterialPageRoute( builder: (context) => Feed( ) ), );
       
   }
 

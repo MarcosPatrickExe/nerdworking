@@ -16,7 +16,7 @@ abstract class FormFieldComponent{
   static TextFormField buildField ({ 
         required Field fieldView,
         required void Function(String) textChagedCallback,
-
+        required BuildContext currentIndex,
         bool? fieldTemplate,
         int? maxLength,
      //   bool? fieldEnabled,
@@ -59,15 +59,15 @@ abstract class FormFieldComponent{
                 counterText: "", // retirando o contador
                 icon:   fieldView.iconnn,
                 enabled: true,
-                iconColor: null,
+                iconColor: Theme.of( currentIndex ).colorScheme.onSurface ,
                 hintText:  fieldView.hintText,
-                hintStyle: TextStyle( color: AppColors.GRAY_TRANSPARENT.color,  fontSize: 20.0 ),
+                hintStyle: TextStyle( color: Theme.of( currentIndex ).colorScheme.tertiaryFixed, fontSize: 20.0 ),
                 labelText:  fieldView.labelText, // titulo do campo
-                labelStyle: TextStyle(  color: AppColors.GRAY.color, ), // titulo do campo
+                labelStyle: TextStyle(  color: Theme.of( currentIndex ).colorScheme.onSurface, ), // titulo do campo
                 border: const OutlineInputBorder(),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
-                      color: AppColors.GRAY.color,
+                      color: Theme.of( currentIndex ).colorScheme.onSurface ,
                   )
                 ),
                 /*

@@ -74,6 +74,7 @@ class CreateUserAccountState extends State<CreateUserAccount>{
                   Icon ( Icons.email_outlined ),
                   TextInputType.emailAddress
                 ), 
+                currentIndex: createUserAccountContext,
                 textChagedCallback: (String value ){  this._emailInput = value; },
                 maxLength: 100, // The maximum length for emails
               ),
@@ -84,6 +85,7 @@ class CreateUserAccountState extends State<CreateUserAccount>{
                   Icon ( Icons.email_outlined ),
                   TextInputType.emailAddress
                 ), 
+                currentIndex: createUserAccountContext,
                 textChagedCallback: (String value ){  this._emailInput = value; },
                 maxLength: 320, // The maximum length for emails
               ),
@@ -95,6 +97,7 @@ class CreateUserAccountState extends State<CreateUserAccount>{
                   Icon ( Icons.password_rounded ),
                   TextInputType.visiblePassword
                 ), 
+                currentIndex: createUserAccountContext,
                 textChagedCallback: (String value ){  this._passwordInput = value; },
                 maxLength: 40,
               ),
