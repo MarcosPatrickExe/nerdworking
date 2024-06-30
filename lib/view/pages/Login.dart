@@ -27,7 +27,12 @@ class _LoginState extends State<Login>{
 
     return Scaffold(
       
-
+      appBar: AppBar(
+        
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+    
+        title: Text("NerdWorking!!"),
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric( horizontal: 60.0 ),
@@ -195,6 +200,14 @@ class _LoginState extends State<Login>{
               
           },
       ),
+
+       /*
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), 
+      */
     );
   }
 }
