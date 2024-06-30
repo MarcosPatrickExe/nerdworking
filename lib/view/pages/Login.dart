@@ -47,6 +47,7 @@ class _LoginState extends State<Login>{
               ),
               const SizedBox( height: 80.0 ),
               FormFieldComponent.buildField( 
+              
                 fieldView: const Field(
                   "Email",
                   "e-mail",
@@ -87,7 +88,7 @@ class _LoginState extends State<Login>{
                         ScaffoldMessenger.of(buildContext).showSnackBar(
                           SnackBar( 
                             content: const Text("O campo 'E-mail' não pode estar vazio!"),
-                    //        backgroundColor: AppColors.RED.color, 
+                            backgroundColor: Theme.of(buildContext).colorScheme.error, 
                           )
                         );
 
@@ -95,7 +96,7 @@ class _LoginState extends State<Login>{
                         ScaffoldMessenger.of( buildContext ).showSnackBar(
                           SnackBar( 
                             content: const Text("O campo 'Senha' não pode estar vazio!"),
-                  //          backgroundColor: AppColors.RED.color, 
+                            backgroundColor: Theme.of(buildContext).colorScheme.error, 
                           ),
                         );
 
@@ -103,7 +104,7 @@ class _LoginState extends State<Login>{
                         ScaffoldMessenger.of(buildContext).showSnackBar(
                           SnackBar( 
                             content: const Text("O campo 'E-mail' não contém o caractere '@' "),
-                      //      backgroundColor: AppColors.RED.color, 
+                            backgroundColor: Theme.of(buildContext).colorScheme.error, 
                           )
                         );
 

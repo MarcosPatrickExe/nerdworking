@@ -16,6 +16,7 @@ abstract class FormFieldComponent{
   static TextFormField buildField ({ 
         required Field fieldView,
         required void Function(String) textChagedCallback,
+
         bool? fieldTemplate,
         int? maxLength,
      //   bool? fieldEnabled,
@@ -58,7 +59,7 @@ abstract class FormFieldComponent{
                 counterText: "", // retirando o contador
                 icon:   fieldView.iconnn,
                 enabled: true,
-                iconColor: AppColors.GRAY.color,
+                iconColor: null,
                 hintText:  fieldView.hintText,
                 hintStyle: TextStyle( color: AppColors.GRAY_TRANSPARENT.color,  fontSize: 20.0 ),
                 labelText:  fieldView.labelText, // titulo do campo

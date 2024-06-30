@@ -7,7 +7,18 @@ import '../../data/services/UserService.dart';
 
 
 
-class CreateUserAccount extends StatelessWidget{
+class CreateUserAccount extends StatefulWidget{
+
+  CreateUserAccount({ super.key });
+
+  @override
+  State<CreateUserAccount> createState() => CreateUserAccountState();
+}
+
+
+
+
+class CreateUserAccountState extends State<CreateUserAccount>{
 
   String _nicknameInput ="";
   String _emailInput = "";
@@ -15,6 +26,17 @@ class CreateUserAccount extends StatelessWidget{
   String _passwordInput ="";
   UserType _userType = UserType.NOT_DEFINED;
 
+
+
+  List<Map< String, dynamic>> optionsSelected = [
+    { "name" : "otaku",   "isChecked" :false  },
+    { "name" : "streamer",    "isChecked" :false },
+    { "name" : "gamer_and_otaku",  "isChecked" :false },
+    { "name" : "gamer_and_streamer",  "isChecked" :false},
+    { "name" : "otaku_and_gamer",        "isChecked" :false },
+    { "name" : "otaku_and_streamer",        "isChecked" :false},
+    { "name" : "gamer_and_otaku_streamer",      "isChecked" :false },
+  ];
 
 
 
@@ -25,7 +47,7 @@ class CreateUserAccount extends StatelessWidget{
     return Scaffold(
       
       appBar: AppBar(
-       // backgroundColor: Theme.of( createUserAccountContext ).colorScheme.inversePrimary,
+        backgroundColor: Theme.of( createUserAccountContext ).colorScheme.surface,
         centerTitle: true,
         title: Text("Criar conta gratuita"),
       ),
@@ -35,11 +57,14 @@ class CreateUserAccount extends StatelessWidget{
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
             //  Image.asset("assets/ic_launcher.png"),
               const SizedBox( height: 30.0 ),
               Text(
                 'Nerdworking',
-                style: Theme.of( createUserAccountContext).textTheme.titleLarge, // headlineMedium
+                style: TextStyle(
+                  color: Theme.of( createUserAccountContext ).colorScheme.onSurface,
+                ) // Theme.of( createUserAccountContext).textTheme.titleLarge, // headlineMedium
               ),
               const SizedBox( height: 80.0 ),
               FormFieldComponent.buildField( 
@@ -71,16 +96,96 @@ class CreateUserAccount extends StatelessWidget{
                   TextInputType.visiblePassword
                 ), 
                 textChagedCallback: (String value ){  this._passwordInput = value; },
-                maxLength: 60,
+                maxLength: 40,
               ),
-              const SizedBox( height: 70.0 ),
+              
+              const SizedBox( height: 40.0 ),
+
+
+              Row( 
+                children: [
+                  Text(
+                    "Qual o seu perfil? ", 
+                    style: TextStyle(
+                      color: Theme.of( createUserAccountContext ).colorScheme.onSurface,
+                    )
+                  ),
+                  SizedBox( width: 20.0, ),
+                  ElevatedButton( 
+                      style: ButtonStyle(
+                        textStyle: WidgetStateProperty.all<TextStyle>(   TextStyle( color: Theme.of( createUserAccountContext).colorScheme.onSecondary,)  ),
+                        backgroundColor: WidgetStateProperty.all<Color>( Theme.of( createUserAccountContext).colorScheme.secondary, ),
+                        shape: WidgetStateProperty.all<OutlinedBorder>( //  MaterialStateProperty.all  ->  RoundedRectangleBorder(
+                          const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all( Radius.circular(30.0) ),
+                          )
+                        ),
+                      ),
+                      onPressed: (){
+                          showDialog<void>(
+                            context: createUserAccountContext,
+                            barrierDismissible: true,  // user must tap button!
+                            builder: ( BuildContext dialogContext ){
+
+                              return AlertDialog(
+                                /*
+                                  actionsAlignment:  MainAxisAlignment.center,
+                                  title: const Row( 
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [  Text("Sobre nós"), ], 
+                                  ), 
+                                */
+                                  content: Padding(
+                                    padding: const EdgeInsets.symmetric( horizontal: 12.0 ),
+                                    child: IntrinsicHeight(
+                                      child: ListView.builder(
+                                          shrinkWrap: true,
+                                          itemCount: this.optionsSelected.length ,
+                                          itemBuilder: (BuildContext  bc, int index ){
+                                            return CheckboxListTile(
+                                                value: this.optionsSelected[index]["isChecked"],
+                                                onChanged: ( bool? value){
+
+                                                  if( value !=null ){
+                                                      super.setState(() {
+                                                          this.optionsSelected[index]["isChecked"] = value;
+                                                          print('valor alterado:  ${ this.optionsSelected[index]["name"]}  /  ${ this.optionsSelected[index]["isChecked"]} ');
+                                                      });
+                                                  }
+                                                  
+                                                },
+                                            );
+                                          }
+                                          
+                                      )
+                                    ),
+                                  ),
+                                  actions: <Widget>[
+                                    TextButton(
+                                      onPressed: () {   Navigator.pop( dialogContext );  },
+                                      child: const Text("Ok", style: TextStyle( fontSize: 15.0 )),
+                                    ),
+                                  ],
+                              );
+                            }
+                          );
+                      }, 
+                      child: Row(children: [  Text("selecionar"), Icon( Icons.ads_click)  ],),
+                  )
+                ],
+              ),
+              
+
+              const SizedBox( height: 40.0 ),
+
+
               Container(
                 height: MediaQuery.of( createUserAccountContext  ).size.height *0.065,
                 width: MediaQuery.of(  createUserAccountContext ).size.width *0.351,
                 child: ElevatedButton(
                   style: ButtonStyle(
                       textStyle: WidgetStateProperty.all<TextStyle>( const TextStyle( color: Color.fromARGB(255, 255, 255, 255),  ) ),
-                  //    backgroundColor: WidgetStateProperty.all<Color>( AppColors.RED.color ),
+                      backgroundColor: WidgetStateProperty.all<Color>( Theme.of( createUserAccountContext).colorScheme.secondary, ),
                       shape: WidgetStateProperty.all<OutlinedBorder>( //  MaterialStateProperty.all  ->  RoundedRectangleBorder(
                           const RoundedRectangleBorder(
                               borderRadius: BorderRadius.all( Radius.circular(30.0) ),
@@ -93,7 +198,7 @@ class CreateUserAccount extends StatelessWidget{
                         ScaffoldMessenger.of( createUserAccountContext  ).showSnackBar(
                           SnackBar( 
                             content: const Text("O campo 'E-mail' não pode estar vazio!"),
-                     //       backgroundColor: AppColors.RED.color, 
+                            backgroundColor: Theme.of(createUserAccountContext).colorScheme.error,
                           )
                         );
 
@@ -101,7 +206,7 @@ class CreateUserAccount extends StatelessWidget{
                         ScaffoldMessenger.of(  createUserAccountContext  ).showSnackBar(
                           SnackBar( 
                             content: const Text("O campo 'Senha' não pode estar vazio!"),
-                      //      backgroundColor: AppColors.RED.color, 
+                            backgroundColor:  Theme.of(createUserAccountContext).colorScheme.error, 
                           ),
                         );
 
@@ -109,7 +214,7 @@ class CreateUserAccount extends StatelessWidget{
                         ScaffoldMessenger.of(  createUserAccountContext  ).showSnackBar(
                           SnackBar( 
                             content: const Text("O campo 'Senha' não pode estar vazio!"),
-                      //      backgroundColor: AppColors.RED.color, 
+                            backgroundColor: Theme.of(createUserAccountContext).colorScheme.error,  
                           ),
                         );
 
@@ -117,7 +222,7 @@ class CreateUserAccount extends StatelessWidget{
                         ScaffoldMessenger.of(  createUserAccountContext  ).showSnackBar(
                           SnackBar( 
                             content: const Text("O campo 'E-mail' não contém o caractere '@' "),
-                     //       backgroundColor: AppColors.RED.color, 
+                            backgroundColor: Theme.of(createUserAccountContext).colorScheme.error,  
                           )
                         );
 
@@ -126,7 +231,7 @@ class CreateUserAccount extends StatelessWidget{
                     }
                     
                   },
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                         Icon( 
