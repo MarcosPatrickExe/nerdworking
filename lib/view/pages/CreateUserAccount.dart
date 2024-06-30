@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import '../../view/components/FormFieldComponent.dart';
 import '../../domain/model/Field.dart';
 import '../../utils/Types.dart';
+import '../../data/services/UserService.dart';
 
 
 
 
 class CreateUserAccount extends StatelessWidget{
 
-  String _nickname ="";
+  String _nicknameInput ="";
   String _emailInput = "";
-  String _avatar = "";
+  // String _avatar = "";
   String _passwordInput ="";
   UserType _userType = UserType.NOT_DEFINED;
 
@@ -43,6 +44,16 @@ class CreateUserAccount extends StatelessWidget{
               const SizedBox( height: 80.0 ),
               FormFieldComponent.buildField( 
                 fieldView: const Field(
+                  "Nick",
+                  "seu nickname",
+                  Icon ( Icons.email_outlined ),
+                  TextInputType.emailAddress
+                ), 
+                textChagedCallback: (String value ){  this._emailInput = value; },
+                maxLength: 100, // The maximum length for emails
+              ),
+              FormFieldComponent.buildField( 
+                fieldView: const Field(
                   "Email",
                   "e-mail",
                   Icon ( Icons.email_outlined ),
@@ -60,7 +71,7 @@ class CreateUserAccount extends StatelessWidget{
                   TextInputType.visiblePassword
                 ), 
                 textChagedCallback: (String value ){  this._passwordInput = value; },
-                maxLength: 30,
+                maxLength: 60,
               ),
               const SizedBox( height: 70.0 ),
               Container(
@@ -78,7 +89,7 @@ class CreateUserAccount extends StatelessWidget{
                   ),
                   onPressed: () async {
 
-                    if( this._emailInput == "" ){
+                    if( this._nicknameInput == "" ){
                         ScaffoldMessenger.of( createUserAccountContext  ).showSnackBar(
                           SnackBar( 
                             content: const Text("O campo 'E-mail' não pode estar vazio!"),
@@ -94,6 +105,14 @@ class CreateUserAccount extends StatelessWidget{
                           ),
                         );
 
+                    }else if( this._emailInput == "" ){
+                        ScaffoldMessenger.of(  createUserAccountContext  ).showSnackBar(
+                          SnackBar( 
+                            content: const Text("O campo 'Senha' não pode estar vazio!"),
+                      //      backgroundColor: AppColors.RED.color, 
+                          ),
+                        );
+
                     }else if( !this._emailInput.toString().contains('@')  ){
                         ScaffoldMessenger.of(  createUserAccountContext  ).showSnackBar(
                           SnackBar( 
@@ -102,8 +121,8 @@ class CreateUserAccount extends StatelessWidget{
                           )
                         );
 
-                    }else{
-                      //  await new UserService().userLogin( this._emailInput,  this._passwordInput, buildContext );
+                    }else {
+                        await new UserService().createAccount( this._emailInput, this._nicknameInput, "",  this._passwordInput, createUserAccountContext );
                     }
                     
                   },

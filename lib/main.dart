@@ -63,7 +63,7 @@ class _SettingAppThemeState extends State<SettingAppTheme> {
   Widget build( BuildContext context ) {
 
     return MaterialApp(
-      title: 'My Nerdworking',
+      title: 'Nerdworking',  // of title bar for web execution
       
       theme: ThemeData(
       //  colorSchemeSeed: Color.fromARGB(255, 48, 110, 245),  //ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 58, 179, 183)),
