@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nerdworking/view/components/UserTypesDialog.dart';
 import '../../view/components/FormFieldComponent.dart';
 import '../../domain/model/Field.dart';
 import '../../utils/Types.dart';
@@ -29,13 +30,17 @@ class CreateUserAccountState extends State<CreateUserAccount>{
 
 
   List<Map< String, dynamic>> optionsSelected = [
-    { "name" : "otaku",   "isChecked" :false  },
-    { "name" : "streamer",    "isChecked" :false },
-    { "name" : "gamer_and_otaku",  "isChecked" :false },
-    { "name" : "gamer_and_streamer",  "isChecked" :false},
-    { "name" : "otaku_and_gamer",        "isChecked" :false },
-    { "name" : "otaku_and_streamer",        "isChecked" :false},
-    { "name" : "gamer_and_otaku_streamer",      "isChecked" :false },
+    { "name" : "Otaku",        "isChecked" :false  },
+    { "name" : "Cinéfilo(a)",   "isChecked" :false},
+    { "name" : "Streamer",       "isChecked" :false },
+    { "name" : "Animador(a)",     "isChecked" :false },
+    { "name" : "Gamer",             "isChecked" :false },
+    { "name" : "Desenvolvedor(a)",   "isChecked" :false},
+    { "name":  "Testador(a)",          "isChecked" :false },
+    { "name" : "Designer",              "isChecked" :false },
+    { "name" : "Gestor(a) de projetos ",   "isChecked" :false },
+    { "name" : "Animador(a)",               "isChecked" :false },
+    { "name" : "Outro",                       "isChecked" :false },
   ];
 
 
@@ -120,51 +125,9 @@ class CreateUserAccountState extends State<CreateUserAccount>{
                       onPressed: (){
                           showDialog<void>(
                             context: createUserAccountContext,
-                            barrierDismissible: true,  // user must tap button!
+                            barrierDismissible: true,  
                             builder: ( BuildContext dialogContext ){
-
-                              return AlertDialog(
-                                /*
-                                  actionsAlignment:  MainAxisAlignment.center,
-                                  title: const Row( 
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [  Text("Sobre nós"), ], 
-                                  ), 
-                                */
-                                  content: Container(
-                                    height: 300.0,
-                                    width: 100.0,
-                                    // Padding(
-                                //    padding: const EdgeInsets.symmetric( horizontal: 3.0 ),
-                                    child: ListView.builder(
-                                          shrinkWrap: true,
-                                          itemCount: this.optionsSelected.length ,
-                                          itemBuilder: (BuildContext  bc, int index ){
-                                            return CheckboxListTile(
-                                                value: this.optionsSelected[index]["isChecked"],
-                                                onChanged: ( bool? value){
-
-                                                  if( value != null ){
-                                                      super.setState(() {
-                                                          this.optionsSelected[index]["isChecked"] = value;
-                                                          print('valor alterado:  ${ this.optionsSelected[index]["name"]}  /  ${ this.optionsSelected[index]["isChecked"]} ');
-                                                      });
-                                                  }
-                                                  
-                                                },
-                                            );
-                                          }
-                                          
-                                      ),
-                                  ),
-                                  
-                                  actions: <Widget>[
-                                    TextButton(
-                                      onPressed: () {   Navigator.pop( dialogContext );  },
-                                      child: const Text("Ok", style: TextStyle( fontSize: 15.0 )),
-                                    ),
-                                  ],
-                              );
+                                return UserTypesDialog( parentContext: createUserAccountContext, parentWidget: this  );
                             }
                           );
                       }, 
