@@ -27,7 +27,6 @@ class _LoginState extends State<Login>{
   Widget build( BuildContext buildContext ){
 
     return Scaffold(
-      
       backgroundColor: Theme.of( buildContext ).colorScheme.surface,
       appBar: AppBar(
         backgroundColor: Theme.of( buildContext ).colorScheme.primary,
@@ -81,67 +80,108 @@ class _LoginState extends State<Login>{
                 maxLength: 30,
               ),
               const SizedBox( height: 70.0 ),
-              Container(
-                height: MediaQuery.of(context).size.height *0.065,
-                width: MediaQuery.of(context).size.width *0.351,
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                      textStyle: WidgetStateProperty.all<TextStyle>( const TextStyle( color: Color.fromARGB(255, 255, 255, 255),  ) ),
-                  //    backgroundColor: WidgetStateProperty.all<Color>( AppColors.RED.color ),
-                      shape: WidgetStateProperty.all<OutlinedBorder>( //  MaterialStateProperty.all  ->  RoundedRectangleBorder(
-                          const RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all( Radius.circular(30.0) ),
-                          )
-                      ),
-                  ),
-                  onPressed: () async {
-
-                    if( this._emailInput == "" ){
-                        ScaffoldMessenger.of(buildContext).showSnackBar(
-                          SnackBar( 
-                            content: const Text("O campo 'E-mail' não pode estar vazio!"),
-                            backgroundColor: Theme.of(buildContext).colorScheme.error, 
-                          )
-                        );
-
-                    }else if( this._passwordInput == "" ){
-                        ScaffoldMessenger.of( buildContext ).showSnackBar(
-                          SnackBar( 
-                            content: const Text("O campo 'Senha' não pode estar vazio!"),
-                            backgroundColor: Theme.of(buildContext).colorScheme.error, 
+              Row(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height *0.065,
+                    width: MediaQuery.of(context).size.width *0.351,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                          textStyle: WidgetStateProperty.all<TextStyle>( const TextStyle( color: Color.fromARGB(255, 255, 255, 255),  ) ),
+                      //    backgroundColor: WidgetStateProperty.all<Color>( AppColors.RED.color ),
+                          shape: WidgetStateProperty.all<OutlinedBorder>( //  MaterialStateProperty.all  ->  RoundedRectangleBorder(
+                              const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.all( Radius.circular(30.0) ),
+                              )
                           ),
-                        );
+                      ),
+                      onPressed: () async {
 
-                    }else if( !this._emailInput.toString().contains('@')  ){
-                        ScaffoldMessenger.of(buildContext).showSnackBar(
-                          SnackBar( 
-                            content: const Text("O campo 'E-mail' não contém o caractere '@' "),
-                            backgroundColor: Theme.of(buildContext).colorScheme.error, 
-                          )
-                        );
+                        if( this._emailInput == "" ){
+                            ScaffoldMessenger.of(buildContext).showSnackBar(
+                              SnackBar( 
+                                content: const Text("O campo 'E-mail' não pode estar vazio!"),
+                                backgroundColor: Theme.of(buildContext).colorScheme.error, 
+                              )
+                            );
 
-                    }else{
-                        await new UserService().loginService( this._emailInput,  this._passwordInput, buildContext );
-                    }
-                    
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                        Icon( Icons.login, // color: AppColors.WHITE.color 
-                        ),
-                        const SizedBox( width: 10.0 ),
-                        Text(
-                          "Entrar",
-                          style: TextStyle(
-                              fontSize: 20.0, 
-                      //        color: AppColors.WHITE.color,
-                          ), 
-                        ),
-                    ]
+                        }else if( this._passwordInput == "" ){
+                            ScaffoldMessenger.of( buildContext ).showSnackBar(
+                              SnackBar( 
+                                content: const Text("O campo 'Senha' não pode estar vazio!"),
+                                backgroundColor: Theme.of(buildContext).colorScheme.error, 
+                              ),
+                            );
+
+                        }else if( !this._emailInput.toString().contains('@')  ){
+                            ScaffoldMessenger.of(buildContext).showSnackBar(
+                              SnackBar( 
+                                content: const Text("O campo 'E-mail' não contém o caractere '@' "),
+                                backgroundColor: Theme.of(buildContext).colorScheme.error, 
+                              )
+                            );
+
+                        }else{
+                            await new UserService().loginService( this._emailInput,  this._passwordInput, buildContext );
+                        }
+                        
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                            Icon( Icons.login, // color: AppColors.WHITE.color 
+                            ),
+                            const SizedBox( width: 10.0 ),
+                            Text(
+                              "Entrar",
+                              style: TextStyle(
+                                  fontSize: 20.0, 
+                          //        color: AppColors.WHITE.color,
+                              ), 
+                            ),
+                        ]
+                      ),
+                    )
                   ),
-                )
-              )
+                  
+                  const SizedBox( width: 20.0 ),
+
+                  Container(
+                    height: MediaQuery.of(context).size.height *0.065,
+                    width: MediaQuery.of(context).size.width *0.351,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                          textStyle: WidgetStateProperty.all<TextStyle>( const TextStyle( color: Color.fromARGB(255, 255, 255, 255),  ) ),
+                      //    backgroundColor: WidgetStateProperty.all<Color>( AppColors.RED.color ),
+                          shape: WidgetStateProperty.all<OutlinedBorder>( //  MaterialStateProperty.all  ->  RoundedRectangleBorder(
+                              const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.all( Radius.circular(30.0) ),
+                              )
+                          ),
+                      ),
+                      onPressed: (){
+                          Navigator.push( buildContext, MaterialPageRoute( builder: (context) => CreateUserAccount() ), );
+                      },
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                            Icon( Icons.add, 
+                            ),
+                            const SizedBox( width: 10.0 ),
+                            Text(
+                              "Criar conta",
+                              style: TextStyle(
+                                  fontSize: 20.0,
+                                  
+                              ), 
+                            ),
+                        ]
+                      ),
+                    )
+                  ),
+                ]
+              ),
+              
               
             ],
           ),

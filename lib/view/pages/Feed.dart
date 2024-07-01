@@ -47,7 +47,7 @@ class FeedState extends State<Feed>{
 
               BottomNavigationBarItem( 
                 icon: Icon( Icons.home ),
-                label: "Publicações"
+                label: "Notícias"
               ),
 
               BottomNavigationBarItem( 
