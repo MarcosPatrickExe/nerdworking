@@ -72,7 +72,7 @@ class CreateUserAccountState extends State<CreateUserAccount>{
                   TextInputType.emailAddress
                 ), 
                 currentIndex: createUserAccountContext,
-                textChagedCallback: (String value ){  this._emailInput = value; },
+                textChagedCallback: (String value ){  this._nicknameInput = value; },
                 maxLength: 100, // The maximum length for emails
               ),
               const SizedBox( height: 30.0 ),
