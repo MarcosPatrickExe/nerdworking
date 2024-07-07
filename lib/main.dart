@@ -24,7 +24,7 @@ class _SettingAppThemeState extends State<SettingAppTheme> {
 
   final ThemeMode _currentTheme = ThemeMode.light;
 
-
+  // DEFAULT THEME COLOR!
   static final _lightColorScreen = ColorScheme(
     brightness: Brightness.light,
     primary: AppColors.BLUE.color, // appbar color
