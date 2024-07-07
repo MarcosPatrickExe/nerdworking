@@ -19,6 +19,8 @@ class Login extends StatefulWidget{
 
 
 class _LoginState extends State<Login>{
+
+  // EMAIL FIXO POR ENQUANTO !!!
   String _emailInput = "marcospatrick039474@gmail.com";
   String _passwordInput = "87153651";
 
