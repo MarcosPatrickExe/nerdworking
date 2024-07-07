@@ -2,7 +2,7 @@ import '../../domain/business/userDAO.dart';
 import '../../domain/model/User.dart';
 
 
-
+// OMLY CRUD ACCESS
 class UserRepository extends UserDAO{
 
   Future<void> login( String email, String password ){
