@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 enum AppColors{
 
-
   // for White THEME:
   MY_PRIMARY_COLOR( Color.fromARGB(255, 23, 133, 2)  ),
   GREEN_DARK( Color.fromARGB(255, 14, 80, 1)  ),
@@ -12,7 +11,7 @@ enum AppColors{
   PURPLE_DARK( Color.fromARGB(255, 113, 3, 185) ),
   WHITE( Color.fromARGB(255, 255, 255, 255) ),
   GRAY(  Color.fromARGB(255, 110, 120, 110)  ),
-  GRAY_TRANSPARENT(  Color.fromARGB(155, 110, 120, 110)  ),
+  GRAY_TRANSPARENT(  Color.fromARGB(135, 110, 120, 110)  ),
   TEXT_BLACK(  Color.fromARGB(180, 0, 0, 0)  ),
   GREEN( Color.fromARGB(255, 23, 133, 2) ),
   RED( Color.fromRGBO(234, 67, 53, 1.0) ),
