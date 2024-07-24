@@ -15,6 +15,9 @@ class FeedState extends State<Feed>{
   @override
   Widget build( BuildContext feedContext ){
 
+    print("===> value: ${Theme.of( feedContext ).colorScheme.primary.toString() }");
+    // cont:   https://www.dhiwise.com/post/leveraging-flutter-themedata-to-create-cohesive-themes
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of( feedContext ).colorScheme.primary,
@@ -52,7 +55,7 @@ class FeedState extends State<Feed>{
 
               BottomNavigationBarItem( 
                 icon:  Icon( Icons.search ),
-                label: "Pesquisar"
+                label: "Buscar amigo(a)"
               ),
 
               BottomNavigationBarItem( 

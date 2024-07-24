@@ -36,7 +36,7 @@ class _SettingAppThemeState extends State<SettingAppTheme> {
     onSecondary: AppColors.WHITE.color,  // AppColors.ORANGE.color, 
     error: AppColors.RED.color, 
     onError: AppColors.WHITE.color, 
-    surface: AppColors.SKYBLUE.color,    // appbar color
+    surface: AppColors.GRAY_SOFT.color,// AppColors.SKYBLUE.color,    // appbar color
     onSurface: AppColors.BLUE_MEDIUM.color,
     tertiaryFixed: AppColors.SKYBLUE_TEXT_HINT.color,
   );
