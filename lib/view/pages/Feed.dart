@@ -23,7 +23,7 @@ class FeedState extends State<Feed>{
       ),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric( horizontal: 40.0 ),
+          padding: const EdgeInsets.symmetric( horizontal: 40.0 ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
