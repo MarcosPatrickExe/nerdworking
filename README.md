@@ -15,5 +15,4 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-
-<p>TJN for vscode remote: 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 </p>
+]
