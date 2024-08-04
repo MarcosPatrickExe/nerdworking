@@ -73,8 +73,12 @@ class _SettingAppThemeState extends State<SettingAppTheme> {
   //      primaryColor: AppColors.WHITE_PRIMARY_COLOR.color,
     //    primaryColorLight: AppColors.ORANGE.color,
    //     scaffoldBackgroundColor: AppColors.GREEN_DARK.color,
-        useMaterial3: false,
-        colorScheme: _lightColorScreen,
+        
+      //  colorScheme: _lightColorScreen,
+        colorSchemeSeed: AppColors.PURPLE_LIGHT.color,
+        brightness: Brightness.light,
+        useMaterial3: true,
+
       ),
       darkTheme: ThemeData(
        // colorSchemeSeed: Color.fromARGB(82, 22, 233, 3),
