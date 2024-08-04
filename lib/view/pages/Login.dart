@@ -29,13 +29,8 @@ class _LoginState extends State<Login>{
   Widget build( BuildContext buildContext ){
 
     return Scaffold(
-      backgroundColor: Theme.of( buildContext ).colorScheme.surface,
+      // backgroundColor: Theme.of( buildContext ).colorScheme.surface,
       
-      appBar: AppBar(
-       // backgroundColor: Theme.of( buildContext ).colorScheme.primary,
-        centerTitle: true,
-        title: Text("Login"),
-      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
