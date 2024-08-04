@@ -42,6 +42,7 @@ class _LoginState extends State<Login>{
             colors: [Theme.of( buildContext ).colorScheme.primary, Theme.of( buildContext ).colorScheme.primaryContainer],
             begin: Alignment.topLeft,
             end:  Alignment.bottomRight,
+            stops: const [0.3, 0.6],
           )
         ),
         child: Center(
