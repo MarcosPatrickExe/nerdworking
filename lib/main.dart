@@ -41,7 +41,7 @@ class _SettingAppThemeState extends State<SettingAppTheme> {
     tertiaryFixed: AppColors.SKYBLUE_TEXT_HINT.color,
   );
 
- 
+
 
   static final _darkTheme = ColorScheme(
   
