@@ -6,7 +6,7 @@ import './view/pages/Login.dart';
 
 void main() {
   runApp( const SettingAppTheme() );
-}
+} 
 
 
 class SettingAppTheme extends StatefulWidget {
