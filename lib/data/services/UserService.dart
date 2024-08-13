@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import '../repositories/UserRepository.dart';
 import '../../view/pages/Feed.dart';
 
- 
+
 
 class UserService{
 
   UserRepository _userRepository;
   UserService(): this._userRepository = UserRepository();
 
- 
+
   Future<void> loginService( String email, String password, BuildContext ctx ) async {
     //  this._userRepository.login( email, password );
 
