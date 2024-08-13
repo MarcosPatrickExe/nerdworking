@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../repositories/UserRepository.dart';
 import '../../view/pages/Feed.dart';
 
-
+ 
 
 class UserService{
 
@@ -22,7 +22,7 @@ class UserService{
   Future<void> createAccount(  String email, String nickName, String avatar, String password, BuildContext createUserCtx ) async{
 
     int status = await this._userRepository.signup(nickName, avatar, email, password);
-
+  
   }
 
 }
