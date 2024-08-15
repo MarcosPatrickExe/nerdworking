@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart'; 
 import 'package:nerdworking/utils/Styles.dart';
 import './view/pages/Login.dart';
-   
- 
+
+
 
 void main() {
   runApp( const SettingAppTheme() );
@@ -19,10 +19,8 @@ class SettingAppTheme extends StatefulWidget {
 
 
 
-
 class _SettingAppThemeState extends State<SettingAppTheme> {
-  
- 
+
   final ThemeMode _currentTheme = ThemeMode.light;
 
   // DEFAULT THEME COLOR!
@@ -74,15 +72,16 @@ class _SettingAppThemeState extends State<SettingAppTheme> {
     //    primaryColorLight: AppColors.ORANGE.color,
    //     scaffoldBackgroundColor: AppColors.GREEN_DARK.color,
         
-      //  colorScheme: _lightColorScreen,
-        colorSchemeSeed: AppColors.PURPLE_LIGHT.color,
-        brightness: Brightness.light,
+
+      //  colorSchemeSeed: AppColors.PURPLE_LIGHT.color,
+      // brightness: Brightness.light,
+        colorScheme: _lightColorScreen,
         useMaterial3: true,
 
       ),
       darkTheme: ThemeData(
        // colorSchemeSeed: Color.fromARGB(82, 22, 233, 3),
-        useMaterial3: false,
+        useMaterial3: true,
         colorScheme: _darkTheme,
       ),
 
