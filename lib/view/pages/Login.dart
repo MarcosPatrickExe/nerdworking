@@ -66,8 +66,8 @@ class _LoginState extends State<Login>{
                 FormFieldComponent.buildField( 
                   fieldView: const Field( 
                     "Email",
-                    "e-mail",
-                    Icon ( Icons.email_outlined ),
+                    "e-mail", 
+                    Icon ( Icons.email_outlined ), 
                     TextInputType.emailAddress
                   ), 
                   currentIndex: buildContext,
