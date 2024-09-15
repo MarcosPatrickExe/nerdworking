@@ -55,7 +55,7 @@ class _LoginState extends State<Login>{
                 ),
                 const SizedBox( height: 30.0 ),
                 Text(
-                  'Nerdworking',
+                  'Nerdworking', 
                   style:  TextStyle( 
                             color: Theme.of( context).colorScheme.onSurface,
                             fontSize: 25.0,
