@@ -21,7 +21,7 @@ class SettingAppTheme extends StatefulWidget {
 
 class _SettingAppThemeState extends State<SettingAppTheme> {
 
-  final ThemeMode _currentTheme = ThemeMode.light;
+  final ThemeMode _currentTheme = ThemeMode.dark;
 
   // DEFAULT THEME COLOR!
   static final _lightColorScreen = ColorScheme(
