@@ -75,7 +75,7 @@ class _LoginState extends State<Login>{
                   maxLength: 320, // The maximum length for emails
                 ),
                 const SizedBox( height: 30.0 ),
-                FormFieldComponent.buildField( 
+                FormFieldComponent.buildField(  
                   fieldView: const Field(
                     "Senha",
                     "senha",
