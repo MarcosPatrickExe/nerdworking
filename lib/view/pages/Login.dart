@@ -62,7 +62,7 @@ class _LoginState extends State<Login>{
                             fontWeight: FontWeight.bold
                           ),
                 ),
-                const SizedBox( height: 80.0 ),
+                const SizedBox( height: 80.0 ), 
                 FormFieldComponent.buildField( 
                   fieldView: const Field( 
                     "Email",
