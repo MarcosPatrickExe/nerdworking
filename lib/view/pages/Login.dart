@@ -79,7 +79,7 @@ class _LoginState extends State<Login>{
                   fieldView: const Field(
                     "Senha",
                     "senha",
-                    Icon ( Icons.password_rounded ),
+                    Icon ( Icons.password_rounded ), 
                     TextInputType.visiblePassword
                   ), 
                   currentIndex: buildContext,
