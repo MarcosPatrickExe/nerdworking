@@ -34,10 +34,10 @@ class _LoginState extends State<Login>{
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Theme.of( buildContext ).colorScheme.primaryContainer, Theme.of( buildContext ).colorScheme.primary, ],
+            colors: [ Theme.of( buildContext ).colorScheme.primary, Theme.of( buildContext ).colorScheme.primaryContainer ],
             begin: Alignment.topCenter,
             end:  Alignment.bottomCenter,
-            stops: const [0.0, 0.7],
+            stops: const [0.1, 0.6],
           )
         ),
         child: Center(
