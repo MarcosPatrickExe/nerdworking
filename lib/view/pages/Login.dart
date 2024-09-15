@@ -34,10 +34,10 @@ class _LoginState extends State<Login>{
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Theme.of( buildContext ).colorScheme.primaryContainer, Theme.of( buildContext ).colorScheme.primary, ],
-            begin: Alignment.topCenter,
-            end:  Alignment.bottomCenter,
-            stops: const [0.0, 0.7],
+            colors: [ Theme.of( buildContext ).colorScheme.primaryContainer, Theme.of( buildContext ).colorScheme.primary, AppColors.BLUE_DARK.color ],
+            begin: Alignment.bottomCenter,
+            end:  Alignment.topRight ,
+            stops: const [0.07, 0.2, 0.9],
           )
         ),
         child: Center(
@@ -55,19 +55,19 @@ class _LoginState extends State<Login>{
                 ),
                 const SizedBox( height: 30.0 ),
                 Text(
-                  'Nerdworking',
+                  'Nerdworking', 
                   style:  TextStyle( 
                             color: Theme.of( context).colorScheme.onSurface,
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold
                           ),
                 ),
-                const SizedBox( height: 80.0 ),
+                const SizedBox( height: 80.0 ), 
                 FormFieldComponent.buildField( 
                   fieldView: const Field( 
                     "Email",
-                    "e-mail",
-                    Icon ( Icons.email_outlined ),
+                    "e-mail", 
+                    Icon ( Icons.email_outlined ), 
                     TextInputType.emailAddress
                   ), 
                   currentIndex: buildContext,
@@ -75,11 +75,11 @@ class _LoginState extends State<Login>{
                   maxLength: 320, // The maximum length for emails
                 ),
                 const SizedBox( height: 30.0 ),
-                FormFieldComponent.buildField( 
+                FormFieldComponent.buildField(  
                   fieldView: const Field(
                     "Senha",
                     "senha",
-                    Icon ( Icons.password_rounded ),
+                    Icon ( Icons.password_rounded ),  
                     TextInputType.visiblePassword
                   ), 
                   currentIndex: buildContext,
