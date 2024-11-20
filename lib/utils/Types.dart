@@ -1,6 +1,3 @@
-
-
-
 enum UserType{  
   GAMER, 
   STREAMER, 

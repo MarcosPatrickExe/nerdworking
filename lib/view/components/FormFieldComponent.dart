@@ -25,7 +25,6 @@ abstract class FormFieldComponent{
       }){ 
 
 
-
         dynamic? inputFormat;
 
         if( isMac != null && isMac == true ){
@@ -36,6 +35,7 @@ abstract class FormFieldComponent{
                 type: MaskAutoCompletionType.lazy
             )
           ]; 
+          
         }else if( isPhoneNumber != null && isPhoneNumber == true ){
           inputFormat = [ 
             MaskTextInputFormatter( 
@@ -85,5 +85,5 @@ abstract class FormFieldComponent{
                 fontSize: 20.0,
             ),
         );
-  }
+      }
 }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../components/FormFieldComponent.dart';
 import '../../domain/model/Field.dart';
 import '../../utils/Styles.dart';
 import './CreateUserAccount.dart';
 import '../../data/services/UserService.dart';
-
+import '../../theme/AppThemeProvider.dart';
 
 
 class Login extends StatefulWidget{
@@ -167,25 +168,26 @@ class _LoginState extends State<Login>{
                             ),
                         ),
                         onPressed: (){
-                            Navigator.push( buildContext, MaterialPageRoute( builder: (context) => CreateUserAccount() ), );
+                          // Navigator.push( buildContext, MaterialPageRoute( builder: (context) => CreateUserAccount() ), );
+                          Provider.of<AppThemeProvider>( super.context, listen: false ).toggleTheme();
+                          print('\nTEMA ALTERADO PARA ${ Provider.of<AppThemeProvider>( buildContext, listen: false ).currentThemeData }'); 
                         },
                         child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                              Icon( Icons.add, 
-                              ),
-                              const SizedBox( width: 10.0 ),
-                              Text(
-                                "Criar conta",
-                                style: TextStyle(
-                                    fontSize: 20.0,
-                                    
-                                ), 
-                              ),
+                            Icon( Icons.add, ),
+                            const SizedBox( width: 10.0 ),
+                            Text(
+                              "Criar conta",
+                              style: TextStyle(
+                                fontSize: 20.0,
+                              ), 
+                            ),
                           ]
                         ),
                       )
                     ),
+                    
                   ]
                 ),
                 
