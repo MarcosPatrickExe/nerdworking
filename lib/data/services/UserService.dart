@@ -13,7 +13,6 @@ class UserService{
   Future<void> loginService( String email, String password, BuildContext ctx ) async {
     //  this._userRepository.login( email, password );
 
-
     Navigator.push( ctx, MaterialPageRoute( builder: (context) => Feed( ) ), );
       
   }
