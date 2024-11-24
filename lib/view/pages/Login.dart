@@ -6,6 +6,7 @@ import '../../utils/Styles.dart';
 import './CreateUserAccount.dart';
 import '../../data/services/UserService.dart';
 import '../../theme/AppThemeProvider.dart';
+import '../../utils/AppConstants.dart';
 
 
 class Login extends StatefulWidget{
@@ -88,15 +89,17 @@ class _LoginState extends State<Login>{
                   maxLength: 30,
                 ),
                 const SizedBox( height: 70.0 ),
-                Row(
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  direction: Axis.horizontal,
                   children: [
                     Container(
-                      height: MediaQuery.of(context).size.height *0.065,
-                      width: MediaQuery.of(context).size.width *0.351,
+                      height: MediaQuery.of(context).size.height * AppConstants.heightButtonRatio,
+                      width: MediaQuery.of(context).size.width * AppConstants.widthButtonRatio,
                       child: ElevatedButton(
                         style: ButtonStyle(
                             textStyle: WidgetStateProperty.all<TextStyle>( const TextStyle( color: Color.fromARGB(255, 255, 255, 255),  ) ),
-                        //    backgroundColor: WidgetStateProperty.all<Color>( AppColors.RED.color ),
+                            backgroundColor: WidgetStateProperty.all<Color>( AppColors.WHITE.color ),
                             shape: WidgetStateProperty.all<OutlinedBorder>( //  MaterialStateProperty.all  ->  RoundedRectangleBorder(
                                 const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all( Radius.circular(30.0) ),
@@ -137,16 +140,15 @@ class _LoginState extends State<Login>{
                         child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                              Icon( Icons.login, // color: AppColors.WHITE.color 
-                              ),
-                              const SizedBox( width: 10.0 ),
-                              Text(
-                                "Entrar",
+                            Icon( Icons.login, ), // color: AppColors.WHITE.color 
+                            const SizedBox( width: 10.0 ),
+                            Text(
+                              "Entrar",
                                 style: TextStyle(
-                                    fontSize: 20.0, 
-                            //        color: AppColors.WHITE.color,
-                                ), 
-                              ),
+                                fontSize: 17.0, 
+                                //  color: AppColors.WHITE.color,
+                              ), 
+                            ),
                           ]
                         ),
                       )
@@ -155,12 +157,12 @@ class _LoginState extends State<Login>{
                     const SizedBox( width: 20.0 ),
 
                     Container(
-                      height: MediaQuery.of(context).size.height *0.065,
-                      width: MediaQuery.of(context).size.width *0.351,
+                      height: MediaQuery.of(context).size.height *  AppConstants.heightButtonRatio,
+                      width: MediaQuery.of(context).size.width * AppConstants.widthButtonRatio,
                       child: ElevatedButton(
                         style: ButtonStyle(
                             textStyle: WidgetStateProperty.all<TextStyle>( const TextStyle( color: Color.fromARGB(255, 255, 255, 255),  ) ),
-                        //    backgroundColor: WidgetStateProperty.all<Color>( AppColors.RED.color ),
+                            backgroundColor: WidgetStateProperty.all<Color>( AppColors.WHITE.color ),
                             shape: WidgetStateProperty.all<OutlinedBorder>( //  MaterialStateProperty.all  ->  RoundedRectangleBorder(
                                 const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all( Radius.circular(30.0) ),
@@ -180,7 +182,7 @@ class _LoginState extends State<Login>{
                             Text(
                               "Criar conta",
                               style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 17.0,
                               ), 
                             ),
                           ]

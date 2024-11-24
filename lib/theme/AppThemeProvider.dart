@@ -4,6 +4,7 @@ import '../utils/Styles.dart';
 
 // DEFAULT THEME COLOR!
 final ThemeData _darkTheme = ThemeData(
+  
   colorScheme: ColorScheme(
     brightness: Brightness.dark,
     primary: AppColors.BLUE_MEDIUM.color, //appbar color
@@ -17,6 +18,7 @@ final ThemeData _darkTheme = ThemeData(
     surface: AppColors.BLUE_DARK.color, // is background color
     onSurface: AppColors.MY_PRIMARY_COLOR.color,
     tertiaryFixed: AppColors.BLUE_MEDIUM.color,
+    
   ),
   // useMaterial3: true,
 );
@@ -29,7 +31,7 @@ final ThemeData _lightTheme = ThemeData(
   //  scaffoldBackgroundColor: AppColors.GREEN_DARK.color,
   //  colorSchemeSeed: AppColors.PURPLE_LIGHT.color,
   //  colorScheme: _lightColorScreen,
-  useMaterial3: true,
+  //  useMaterial3: true,
   colorScheme: ColorScheme(
     brightness: Brightness.light,
     primary: AppColors.RED.color, // appbar color
