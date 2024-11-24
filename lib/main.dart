@@ -13,18 +13,10 @@ void main() {
 } 
 
 
-class SettingAppTheme extends StatefulWidget {
+
+class SettingAppTheme extends StatelessWidget {
   const SettingAppTheme({ super.key });
-
-  @override
-  State<SettingAppTheme> createState () => _SettingAppThemeState();
-}
-
-
-class _SettingAppThemeState extends State<SettingAppTheme> {
-
-  final ThemeMode _currentTheme = ThemeMode.dark;
-
+ 
   @override
   Widget build( BuildContext context ) {
 
@@ -34,5 +26,5 @@ class _SettingAppThemeState extends State<SettingAppTheme> {
       home:  Login( ),
     );
 
-  }
+  } 
 }

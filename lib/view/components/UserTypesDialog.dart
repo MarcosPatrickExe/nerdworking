@@ -8,7 +8,6 @@ class UserTypesDialog extends StatefulWidget{
   BuildContext _parentContext;
   CreateUserAccountState _parentWidget;
 
-
   UserTypesDialog({
       super.key, 
       required BuildContext parentContext, 
@@ -42,26 +41,26 @@ class UserTypesDialogState extends State<UserTypesDialog>{
             // Padding(
         //    padding: const EdgeInsets.symmetric( horizontal: 3.0 ),
             child:ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: super.widget._parentWidget.optionsSelected.length,
-                  itemBuilder: (BuildContext bc, int index ){
+                shrinkWrap: true,
+                itemCount: super.widget._parentWidget.optionsSelected.length,
+                itemBuilder: (BuildContext bc, int index ){
 
-                    return CheckboxListTile(
-                        title: Text( super.widget._parentWidget.optionsSelected[index]["name"], ),
-                        value: super.widget._parentWidget.optionsSelected[index]["isChecked"],
-                        onChanged: ( bool? value){
+                  return CheckboxListTile(
+                      title: Text( super.widget._parentWidget.optionsSelected[index]["name"], ),
+                      value: super.widget._parentWidget.optionsSelected[index]["isChecked"],
+                      onChanged: ( bool? value){
 
-                          if( value != null ){
-                              super.setState(() {
-                                  super.widget._parentWidget.optionsSelected[index]["isChecked"] = value;
-                                  print('valor alterado:  ${ super.widget._parentWidget.optionsSelected[index]["name"]}  /  ${ super.widget._parentWidget.optionsSelected[index]["isChecked"]} ');
-                              });
-                          }
-                        },
-                    );
-                  }
+                        if( value != null ){
+                            super.setState(() {
+                                super.widget._parentWidget.optionsSelected[index]["isChecked"] = value;
+                                print('valor alterado:  ${ super.widget._parentWidget.optionsSelected[index]["name"]}  /  ${ super.widget._parentWidget.optionsSelected[index]["isChecked"]} ');
+                            });
+                        }
+                      },
+                  );
+                }
                   
-              ),
+            ),
           ),
           
           actions: <Widget>[
