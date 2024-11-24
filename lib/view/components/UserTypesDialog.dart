@@ -40,7 +40,7 @@ class UserTypesDialogState extends State<UserTypesDialog>{
             width: 250.0,
             // Padding(
         //    padding: const EdgeInsets.symmetric( horizontal: 3.0 ),
-            child:ListView.builder(
+            child: ListView.builder(
                 shrinkWrap: true,
                 itemCount: super.widget._parentWidget.optionsSelected.length,
                 itemBuilder: (BuildContext bc, int index ){

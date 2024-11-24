@@ -59,10 +59,10 @@ class _LoginState extends State<Login>{
                 Text(
                   'Nerdworking', 
                   style:  TextStyle( 
-                            color: Theme.of( context).colorScheme.onSurface,
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold
-                          ),
+                      color: Theme.of( context).colorScheme.onSurface,
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold
+                  ),
                 ),
                 const SizedBox( height: 80.0 ), 
                 FormFieldComponent.buildField( 
