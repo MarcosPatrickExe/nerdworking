@@ -2,7 +2,7 @@
 
 class User{
 
-  int? _ID;
+  int? _ID; 
   String _email;
   String _nickName;
   String _avatar;
