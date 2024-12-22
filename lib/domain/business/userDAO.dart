@@ -9,7 +9,7 @@ abstract class UserDAO{
   Future<int> signup( String nickName, String avatar, String email, String password ); 
 
   Future<bool> deleteAccountByID( int userID, String email ); 
-
+ 
   Future<bool> updateAccountDataByID( int userID, User user ); 
 
 }
