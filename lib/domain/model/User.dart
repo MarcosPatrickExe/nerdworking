@@ -4,7 +4,7 @@ class User{
 
   int? _ID; 
   String _email;
-  String _nickName;
+  String _nickName; 
   String _avatar;
   String _password;
   int _score;
