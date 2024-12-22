@@ -25,7 +25,7 @@ class User{
     this._password = passwordd,
     this._score = scoree;
 
-
+ 
 
     factory User.fromJSON( Map<String, dynamic> jsonfile ){
 
