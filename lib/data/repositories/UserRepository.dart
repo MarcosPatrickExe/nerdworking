@@ -1,5 +1,5 @@
 import '../../domain/business/userDAO.dart'; 
-import '../../domain/model/User.dart';
+import '../../domain/model/User.dart'; 
 
 
 // OMLY CRUD ACCESS
