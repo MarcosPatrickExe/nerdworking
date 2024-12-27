@@ -9,7 +9,7 @@ enum AppColors{
   GREEN_DARK( Color.fromARGB(255, 14, 80, 1)  ), 
   PURPLE_LIGHT( Color.fromARGB(255, 113, 3, 185) ), 
   PURPLE_DARK( Color.fromARGB(255, 113, 3, 185) ),
-  WHITE( Color.fromARGB(255, 255, 255, 255) ),
+  WHITE( Color.fromARGB(255, 255, 255, 255) ), 
   GRAY(  Color.fromARGB(255, 110, 120, 110)  ),
   GRAY_SOFT(  Color.fromARGB(255, 216, 216, 216)  ),
   GRAY_TRANSPARENT(  Color.fromARGB(135, 110, 120, 110)  ), 
