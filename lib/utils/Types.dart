@@ -1,6 +1,6 @@
 enum UserType{  
   GAMER, 
-  STREAMER, 
+  STREAMER,  
   OTAKU, 
   GAMER_AND_OTAKU, 
   GAMER_AND_STREAMER,
