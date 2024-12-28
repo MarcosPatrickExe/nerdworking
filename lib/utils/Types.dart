@@ -6,4 +6,4 @@ enum UserType{
   GAMER_AND_STREAMER,
   STREAMER_AND_OTAKU,
   NOT_DEFINED
-}
+} 
