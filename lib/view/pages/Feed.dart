@@ -6,7 +6,7 @@ class Feed extends StatefulWidget{
 
   @override
   State<Feed> createState() => FeedState();
-}
+} 
 
 
 
