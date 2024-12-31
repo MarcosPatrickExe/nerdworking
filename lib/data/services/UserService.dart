@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../repositories/UserRepository.dart';
 import '../../view/pages/Feed.dart';
-
+ 
 
 
 class UserService{
