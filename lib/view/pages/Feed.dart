@@ -42,7 +42,7 @@ class FeedState extends State<Feed>{
         ),
       ),
       
-
+ 
       bottomNavigationBar: BottomNavigationBar(
 
           currentIndex: 0,
