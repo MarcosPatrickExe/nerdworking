@@ -10,7 +10,7 @@ void main() {
     create: (_)=> AppThemeProvider(),
     child: const SettingAppTheme(),
   ) );
-}   
+}    
 
  
 
