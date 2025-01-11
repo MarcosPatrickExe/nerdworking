@@ -10,7 +10,7 @@ class User{
   int _score;
 
 
-  User({
+  User({ 
     int? id,
     required String emaill,
     required String nickNamee,
