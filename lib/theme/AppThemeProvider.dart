@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../utils/Styles.dart';  
 
- 
+  
 // DEFAULT THEME COLOR!
 final ThemeData _darkTheme = ThemeData(
    
