@@ -7,7 +7,7 @@ final ThemeData _darkTheme = ThemeData(
    
   colorScheme: ColorScheme( 
     brightness: Brightness.dark,
-    primary: AppColors.BLUE_MEDIUM.color, //appbar color
+    primary: AppColors.BLUE_MEDIUM.color, //appbar color 
     onPrimary: Color(0xFFFFFFFF), // Color(0xFFFFB0D0), // appbar text
     primaryContainer: AppColors.BLUE.color,
     onPrimaryContainer: Color(0xFFFFD8E6),
