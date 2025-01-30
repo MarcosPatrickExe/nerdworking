@@ -18,7 +18,6 @@ final ThemeData _darkTheme = ThemeData(
     surface: AppColors.BLUE_DARK.color, // is background color
     onSurface: AppColors.MY_PRIMARY_COLOR.color,
     tertiaryFixed: AppColors.BLUE_MEDIUM.color,
-     
   ), 
   // useMaterial3: true,
 );
