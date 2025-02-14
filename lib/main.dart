@@ -21,7 +21,7 @@ class SettingAppTheme extends StatelessWidget {
   Widget build( BuildContext context ) {
 
     return MaterialApp(
-      title: 'Nerdworking',  // of title bar for web execution
+      title: 'Nerdworking',  // of title bar for web execution 
       theme: Provider.of<AppThemeProvider>(context ).currentThemeData ,
       home:  Login( ),
     );
