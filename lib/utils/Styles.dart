@@ -12,7 +12,7 @@ enum AppColors{
   GRAY(  Color.fromARGB(255, 110, 120, 110)  ),
   GRAY_SOFT(  Color.fromARGB(255, 216, 216, 216)  ),
   GRAY_TRANSPARENT(  Color.fromARGB(135, 110, 120, 110)  ), 
-  TEXT_BLACK(  Color.fromARGB(180, 0, 0, 0)  ),
+  TEXT_BLACK(  Color.fromARGB(180, 0, 0, 0)  ), 
   GREEN( Color.fromARGB(255, 23, 133, 2) ),
   RED( Color.fromRGBO(234, 67, 53, 1.0) ),
   ORANGE( Color.fromRGBO(243, 153, 35, 1) ), 
