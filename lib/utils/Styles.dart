@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
     
-enum AppColors{
+enum AppColors{ 
 
   // for White THEME:
   MY_PRIMARY_COLOR( Color.fromARGB(255, 23, 133, 2)  ),
