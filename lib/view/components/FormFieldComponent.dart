@@ -11,7 +11,7 @@ abstract class FormFieldComponent{
         Field( "senha", "sua senha", Icon( Icons.password ), TextInputType.visiblePassword ),
   ];
 
-
+ 
 
   static TextFormField buildField ({ 
         required Field fieldView,
