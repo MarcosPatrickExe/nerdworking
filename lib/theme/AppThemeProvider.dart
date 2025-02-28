@@ -9,7 +9,7 @@ final ThemeData _darkTheme = ThemeData(
     brightness: Brightness.dark,
     primary: AppColors.BLUE_MEDIUM.color, //appbar color 
     onPrimary: Color(0xFFFFFFFF), // Color(0xFFFFB0D0), // appbar text
-    primaryContainer: AppColors.BLUE.color,
+    primaryContainer: AppColors.BLUE.color, 
     onPrimaryContainer: Color(0xFFFFD8E6),
     secondary: AppColors.BLUE.color, // float action button
     onSecondary: AppColors.WHITE.color, // float action button text
