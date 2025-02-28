@@ -4,7 +4,7 @@ import '../utils/Styles.dart';
    
 // DEFAULT THEME COLOR!
 final ThemeData _darkTheme = ThemeData(
-   
+    
   colorScheme: ColorScheme( 
     brightness: Brightness.dark,
     primary: AppColors.BLUE_MEDIUM.color, //appbar color 
