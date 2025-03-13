@@ -6,7 +6,7 @@ import '../../view/pages/Feed.dart';
 
 class UserService{ 
 
-  UserRepository _userRepository;
+  UserRepository _userRepository; 
   UserService(): this._userRepository = UserRepository();
 
 
