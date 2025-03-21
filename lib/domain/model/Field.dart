@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
   
 
-class Field { 
+class Field {  
     final String? labelText;
     final String? hintText;
     final Icon? iconnn; 
