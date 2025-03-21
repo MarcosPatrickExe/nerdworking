@@ -7,5 +7,5 @@ class Field {
     final Icon? iconnn; 
     final TextInputType? inputType; 
 
-    const Field( this.labelText, this.hintText, this.iconnn, this.inputType );
+    const Field( this.labelText, this.hintText, this.iconnn, this.inputType ); 
 }
