@@ -1,7 +1,7 @@
 import '../../domain/business/userDAO.dart';   
 import '../../domain/model/User.dart'; 
 
- 
+  
 // OMLY CRUD ACCESS 
 class UserRepository extends UserDAO{
 
