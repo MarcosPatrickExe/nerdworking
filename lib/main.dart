@@ -5,7 +5,7 @@ import './view/pages/Login.dart';
 import 'theme/AppThemeProvider.dart';   
 
   
-void main() { 
+void main() {  
   runApp( ChangeNotifierProvider(
     create: (_)=> AppThemeProvider(),
     child: const SettingAppTheme(),
