@@ -7,14 +7,14 @@ import 'theme/AppThemeProvider.dart';
   
 void main() {   
   runApp( ChangeNotifierProvider(
-    create: (_)=> AppThemeProvider(), 
+    create: (_)=> AppThemeProvider(),  
     child: const SettingAppTheme(), 
   ) );
 }      
  
  
 
-class SettingAppTheme extends StatelessWidget {
+class SettingAppTheme extends StatelessWidget {  // hierarquia
   const SettingAppTheme({ super.key });
   
   @override
