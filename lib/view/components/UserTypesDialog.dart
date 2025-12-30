@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:nerdworking/view/pages/CreateUserAccount.dart';
 
 
- 
 class UserTypesDialog extends StatefulWidget{
 
   BuildContext _parentContext;
