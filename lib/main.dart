@@ -15,7 +15,6 @@ void main() {
   ) );
 }      
  
- 
 
 class SettingAppTheme extends StatelessWidget {  // hierarquia
   const SettingAppTheme({ super.key });
