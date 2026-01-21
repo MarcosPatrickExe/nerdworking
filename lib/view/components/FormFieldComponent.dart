@@ -1,8 +1,8 @@
-import "package:flutter/material.dart";
+import "package:flutter/material.dart";  
 import "../../domain/model/Field.dart";
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import '../../utils/Styles.dart';
-
+  
 
 abstract class FormFieldComponent{
 
@@ -11,7 +11,7 @@ abstract class FormFieldComponent{
         Field( "senha", "sua senha", Icon( Icons.password ), TextInputType.visiblePassword ),
   ];
 
-
+ 
 
   static TextFormField buildField ({ 
         required Field fieldView,

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../repositories/UserRepository.dart';
-import '../../view/pages/Feed.dart';
+import '../../view/pages/Feed.dart';  
+  
+ 
 
+class UserService{ 
 
-
-class UserService{
-
-  UserRepository _userRepository;
+  UserRepository _userRepository; 
   UserService(): this._userRepository = UserRepository();
 
 

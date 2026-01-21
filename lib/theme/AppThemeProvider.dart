@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import '../utils/Styles.dart';
-
-
+import 'package:flutter/material.dart'; 
+import '../utils/Styles.dart';      
+   
+    
 // DEFAULT THEME COLOR!
 final ThemeData _darkTheme = ThemeData(
-  
+
     colorScheme: ColorScheme(
       brightness: Brightness.dark,
       primary: AppColors.BLUE_MEDIUM.color, //appbar color
@@ -19,7 +19,7 @@ final ThemeData _darkTheme = ThemeData(
       onSurface: AppColors.MY_PRIMARY_COLOR.color,
       tertiaryFixed: AppColors.BLUE_MEDIUM.color,
     ),
-    // useMaterial3: true,
+  
 );
 
 

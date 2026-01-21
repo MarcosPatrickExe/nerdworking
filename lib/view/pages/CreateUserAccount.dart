@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nerdworking/view/components/UserTypesDialog.dart';
 import '../../view/components/FormFieldComponent.dart';
-import '../../domain/model/Field.dart';
+import '../../domain/model/Field.dart'; 
 import '../../utils/Types.dart';
 import '../../data/services/UserService.dart';
 

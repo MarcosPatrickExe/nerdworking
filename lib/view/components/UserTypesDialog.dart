@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:nerdworking/view/pages/CreateUserAccount.dart';
 
 
-
 class UserTypesDialog extends StatefulWidget{
 
   BuildContext _parentContext;
@@ -19,7 +18,7 @@ class UserTypesDialog extends StatefulWidget{
   @override
   State<UserTypesDialog> createState() => UserTypesDialogState();
 }
-
+ 
 
 
 class UserTypesDialogState extends State<UserTypesDialog>{

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-
-
-
-class Feed extends StatefulWidget{
+ 
+ 
+  
+class Feed extends StatefulWidget{ 
 
   @override
   State<Feed> createState() => FeedState();
-}
+} 
 
 
 
@@ -42,7 +42,7 @@ class FeedState extends State<Feed>{
         ),
       ),
       
-
+ 
       bottomNavigationBar: BottomNavigationBar(
 
           currentIndex: 0,

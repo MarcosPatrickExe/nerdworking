@@ -6,24 +6,22 @@ import 'theme/AppThemeProvider.dart';
 
 
 void main() {
-  
   runApp( ChangeNotifierProvider(
-    create: (_)=> AppThemeProvider(),
-    child: const SettingAppTheme(),
+    create: (_)=> AppThemeProvider(),  
+    child: const SettingAppTheme(), 
   ) );
-  
 } 
 
 
+
 class SettingAppTheme extends StatelessWidget {
-  
   const SettingAppTheme({ super.key });
- 
+  
   @override
   Widget build( BuildContext context ) {
 
     return MaterialApp(
-      title: 'Nerdworking',  // of title bar for web execution
+      title: 'Nerdworking',  // of title bar for web execution 
       theme: Provider.of<AppThemeProvider>(context ).currentThemeData ,
       home:  Login( ),
     );
