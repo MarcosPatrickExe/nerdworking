@@ -2,7 +2,7 @@ import '../../domain/business/userDAO.dart';
 import '../../domain/model/User.dart'; 
 
 
-class UserRepository extends UserDAO{
+class UserRepository implements UserDAO{
 
   Future<void> login( String email, String password ){ 
       return Future.value(false);

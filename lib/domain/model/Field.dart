@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-class Test {  
-   final int integer = 23;
-}
-
 class Field {  
     final String? labelText;
     final String? hintText;
