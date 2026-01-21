@@ -24,8 +24,8 @@ enum AppColors{
   BLUE_DARK( Color.fromRGBO(1, 43, 92, 1) );
 
 
-  const AppColors( this.color );
   final Color color;
+  const AppColors( this.color );
 }
 
 

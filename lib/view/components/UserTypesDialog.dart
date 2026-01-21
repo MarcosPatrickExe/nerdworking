@@ -46,20 +46,19 @@ class UserTypesDialogState extends State<UserTypesDialog>{
                 itemBuilder: (BuildContext bc, int index ){
 
                   return CheckboxListTile(
-                      title: Text( super.widget._parentWidget.optionsSelected[index]["name"], ),
-                      value: super.widget._parentWidget.optionsSelected[index]["isChecked"],
-                      onChanged: ( bool? value){
+                    title: Text( super.widget._parentWidget.optionsSelected[index]["name"], ),
+                    value: super.widget._parentWidget.optionsSelected[index]["isChecked"],
+                    onChanged: ( bool? value){
 
-                        if( value != null ){
-                            super.setState(() {
-                                super.widget._parentWidget.optionsSelected[index]["isChecked"] = value;
-                                print('valor alterado:  ${ super.widget._parentWidget.optionsSelected[index]["name"]}  /  ${ super.widget._parentWidget.optionsSelected[index]["isChecked"]} ');
-                            });
-                        }
-                      },
+                      if( value != null ){
+                        super.setState(() {
+                            super.widget._parentWidget.optionsSelected[index]["isChecked"] = value;
+                            print('valor alterado:  ${ super.widget._parentWidget.optionsSelected[index]["name"]}  /  ${ super.widget._parentWidget.optionsSelected[index]["isChecked"]} ');
+                        });
+                      }
+                    },
                   );
                 }
-                  
             ),
           ),
           

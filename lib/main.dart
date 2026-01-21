@@ -6,15 +6,17 @@ import 'theme/AppThemeProvider.dart';
 
 
 void main() {
+  
   runApp( ChangeNotifierProvider(
     create: (_)=> AppThemeProvider(),
     child: const SettingAppTheme(),
   ) );
+  
 } 
 
 
-
 class SettingAppTheme extends StatelessWidget {
+  
   const SettingAppTheme({ super.key });
  
   @override
