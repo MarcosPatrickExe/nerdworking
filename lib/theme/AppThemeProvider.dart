@@ -63,7 +63,7 @@ class AppThemeProvider extends ChangeNotifier {
     AppThemeProvider.currentTheme = (AppThemeProvider.currentTheme == AppTHEME.LIGHT ) ? AppTHEME.DARK : AppTHEME.LIGHT;
     this.currentThemeData = (this.currentThemeData == _lightTheme) ? _darkTheme : _lightTheme;
 
-    notifyListeners();
+    super.notifyListeners();
     // this._themeMode = ( this._themeMode == ThemeMode.light) ? ThemeMode.dark : ThemeMode.light;
   }
 }

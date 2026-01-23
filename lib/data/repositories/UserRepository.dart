@@ -8,11 +8,17 @@ class UserRepository implements UserDAO{
       return Future.value(false);
   }
   
-  Future<int> signup( String nickName, String avatar, String email, String password ){  throw Error(); } 
+  Future<int> signup( String nickName, String avatar, String email, String password ){  
+    throw Error(); 
+  } 
 
-  Future<bool> deleteAccountByID( int userID, String email ){ return Future.value(false);  }
+  Future<bool> deleteAccountByID( int userID, String email ){ 
+    return Future.value(false);  
+  }
 
-  Future<bool> updateAccountDataByID( int userID, User user ){  return Future.value(false);  }
+  Future<bool> updateAccountDataByID( int userID, User user ){  
+    return Future.value(false); 
+  }
 
 }
 

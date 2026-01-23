@@ -57,6 +57,7 @@ class UserTypesDialogState extends State<UserTypesDialog>{
                       }
                     },
                   );
+                  
                 }
             ),
           ),
