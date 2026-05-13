@@ -6,6 +6,7 @@ import 'theme/AppThemeProvider.dart';
 
 void main() { 
   runApp( ChangeNotifierProvider(
+    
       create: (_)=> AppThemeProvider(),  
       child: const SettingAppTheme(), 
   ) );
