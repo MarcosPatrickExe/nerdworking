@@ -4,6 +4,7 @@ import 'package:nerdworking/view/pages/CreateUserAccount.dart';
 
 class UserTypesDialog extends StatefulWidget{
 
+  
   BuildContext _parentContext;
   CreateUserAccountState _parentWidget;
 
